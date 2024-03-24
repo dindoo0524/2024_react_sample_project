@@ -1,3 +1,14 @@
+# Used API
+
+클래스 목록
+https://dev-rest.liveklass.com/v3.0/channels/101/courses
+
+클래스 상세
+https://dev-rest.liveklass.com/v1.0/channels/101/courses/29248
+
+공지사항
+https://dev-rest.liveklass.com/v2.0/channels/notices?channelSeq=101
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
