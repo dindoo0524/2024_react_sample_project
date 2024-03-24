@@ -2,10 +2,10 @@ import Layout from "./components/Layouts/Layout";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./routes/Home";
 import About from "./routes/About";
-import Classes from "./routes/Classes";
+import Classes from "./routes/Courses";
 import Mypage from "./routes/Mypage";
 import NoMatch from "./routes/NoMatch";
-import ClassDetail from "./routes/ClassDetail";
+import ClassDetail from "./routes/CourseDetail";
 import Notice from "./routes/Notice";
 
 const App = () => {
