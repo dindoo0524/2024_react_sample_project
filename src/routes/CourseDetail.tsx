@@ -1,5 +1,9 @@
+import { useParams } from "react-router-dom";
+
 const CourseDetail = () => {
-  return <div>CourseDetail</div>;
+  const { courseSeq } = useParams();
+
+  return <div>CourseDetail For {courseSeq}</div>;
 };
 
 export default CourseDetail;
