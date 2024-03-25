@@ -1,4 +1,4 @@
-import { CourseInfo } from "../routes/Courses";
+import { CourseInfo } from "../interface/Course";
 
 interface PriceFormat {
   type: PriceFormatType;

@@ -1,10 +1,10 @@
 import { Link } from "react-router-dom";
-import { CourseInfo } from "../../routes/Courses";
 import {
   formattedCouresPrice,
   PriceFormatType,
 } from "../../utils/priceFormatter";
 import { AiFillStar } from "react-icons/ai";
+import { CourseInfo } from "../../interface/Course";
 
 interface CourseProps {
   course: CourseInfo;
