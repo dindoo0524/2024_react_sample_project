@@ -19,33 +19,32 @@ const CourseDetail = () => {
   const { courseSeq } = useParams();
 
   useEffect(() => {
-    fetchData();
-  }, []);
+    const fetchData = async () => {
+      try {
+        const [courseResponse, curriculumResponse] = await Promise.all([
+          fetch(
+            `https://dev-rest.liveklass.com/v1.0/channels/101/courses/${courseSeq}`
+          ),
+          fetch(
+            `https://dev-rest.liveklass.com/v1.0/channels/101/courses/${courseSeq}/curriculums`
+          ),
+        ]);
 
-  const fetchData = async () => {
-    try {
-      const [courseResponse, curriculumResponse] = await Promise.all([
-        fetch(
-          `https://dev-rest.liveklass.com/v1.0/channels/101/courses/${courseSeq}`
-        ),
-        fetch(
-          `https://dev-rest.liveklass.com/v1.0/channels/101/courses/${courseSeq}/curriculums`
-        ),
-      ]);
+        const courseData = await courseResponse.json();
+        const curriculumData = await curriculumResponse.json();
 
-      const courseData = await courseResponse.json();
-      const curriculumData = await curriculumResponse.json();
-
-      if (courseResponse.ok && curriculumResponse.ok) {
-        setCourse(courseData.course);
-        setCurriculums(curriculumData.list);
+        if (courseResponse.ok && curriculumResponse.ok) {
+          setCourse(courseData.course);
+          setCurriculums(curriculumData.list);
+        }
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      } finally {
+        setLoading(false);
       }
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    } finally {
-      setLoading(false);
-    }
-  };
+    };
+    fetchData();
+  }, [courseSeq]);
 
   return (
     <CourseDetailLayout>
