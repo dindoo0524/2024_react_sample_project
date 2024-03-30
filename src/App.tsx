@@ -6,7 +6,7 @@ import Classes from "./routes/Courses";
 import Mypage from "./routes/Mypage";
 import NoMatch from "./routes/NoMatch";
 import ClassDetail from "./routes/CourseDetail";
-import Notice from "./routes/Notice";
+import Notices from "./routes/Notices";
 
 const App = () => {
   return (
@@ -17,7 +17,7 @@ const App = () => {
           <Route path="about" element={<About />} />
           <Route path="classes" element={<Classes />} />
           <Route path="classes/:courseSeq" element={<ClassDetail />} />
-          <Route path="notice" element={<Notice />} />
+          <Route path="notice" element={<Notices />} />
           <Route path="mypage" element={<Mypage />} />
           <Route path="*" element={<NoMatch />} />
         </Route>
