@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom";
 import CourseDetailLayout from "../components/Layouts/CourseDetailLayout";
 import { useEffect, useState } from "react";
 import { formattedDateTime } from "../utils/dateTimeFormatter";
-import RatingStar from "../components/RatingStar";
+import RatingStar from "../components/Common/RatingStar/RatingStar";
 import { CourseInfo, CurriculumInfo } from "../interface/Course";
 import CourseCurriculum from "../components/Course/CourseCurriculum";
 
