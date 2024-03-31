@@ -3,7 +3,7 @@ import { formattedDateTime } from "../../utils/dateTimeFormatter";
 import { extractTextFromHTML } from "../../utils/extractTextFromHTML";
 import Badge from "../Common/Badge/Badge";
 import { BadgeColorType, BadgeInfo } from "../Common/Badge/BadgeInfo";
-import { AiFillStar, AiOutlineClockCircle, AiOutlineEye } from "react-icons/ai";
+import { AiOutlineClockCircle, AiOutlineEye } from "react-icons/ai";
 
 interface NoticeProps {
   notice: NoticeInfo;

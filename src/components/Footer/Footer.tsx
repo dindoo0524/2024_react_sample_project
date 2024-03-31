@@ -1,6 +1,6 @@
 const Footer = () => {
   return (
-    <footer>
+    <footer className="py-20px px-[100px] bg-orange-600 text-white">
       <ul className="">
         <li>대표자: 나대표</li>
         <li>사업자등록번호: 00-0000-0000-0000</li>

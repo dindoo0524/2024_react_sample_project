@@ -4,11 +4,13 @@ import { Outlet } from "react-router-dom";
 
 const Layout = () => {
   return (
-    <div className="py-20px px-[100px]">
+    <>
       <Header></Header>
-      <Outlet></Outlet>
+      <div className="py-20px px-[100px]">
+        <Outlet></Outlet>
+      </div>
       <Footer></Footer>
-    </div>
+    </>
   );
 };
 

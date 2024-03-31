@@ -26,7 +26,7 @@ const Header = () => {
   ];
 
   return (
-    <header className="flex justify-between">
+    <header className="flex justify-between py-40px px-[100px]">
       <Link to="/">
         <h1 className="font-mono font-bold text-[40px] mr-[100px]">
           JOYFUL CODING ❤️
