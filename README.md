@@ -1,5 +1,6 @@
 # Used API
 
+sample00 dev
 클래스 목록
 https://dev-rest.liveklass.com/v3.0/channels/101/courses
 
@@ -8,6 +9,16 @@ https://dev-rest.liveklass.com/v1.0/channels/101/courses/29248
 
 공지사항
 https://dev-rest.liveklass.com/v2.0/channels/notices?channelSeq=101
+
+master 운영
+클래스 목록
+https://rest.liveklass.com/v3.0/channels/2089/courses
+
+클래스 상세
+https://rest.liveklass.com/v1.0/channels/2089/courses/188909
+
+공지사항
+https://rest.liveklass.com/v2.0/channels/notices?channelSeq=2089
 
 # Getting Started with Create React App
 

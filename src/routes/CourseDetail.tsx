@@ -20,14 +20,16 @@ const CourseDetail = () => {
 
   useEffect(() => {
     const fetchData = async () => {
+      // const courseUrl = `https://dev-rest.liveklass.com/v1.0/channels/101/courses/${courseSeq}`;
+      const courseUrl = `https://rest.liveklass.com/v1.0/channels/2089/courses/${courseSeq}`;
+
+      // const curriculumUrl = `https://dev-rest.liveklass.com/v1.0/channels/101/courses/${courseSeq}/curriculums`;
+      const curriculumUrl = `https://rest.liveklass.com/v1.0/channels/2089/courses/${courseSeq}/curriculums`;
+
       try {
         const [courseResponse, curriculumResponse] = await Promise.all([
-          fetch(
-            `https://dev-rest.liveklass.com/v1.0/channels/101/courses/${courseSeq}`
-          ),
-          fetch(
-            `https://dev-rest.liveklass.com/v1.0/channels/101/courses/${courseSeq}/curriculums`
-          ),
+          fetch(courseUrl),
+          fetch(curriculumUrl),
         ]);
 
         const courseData = await courseResponse.json();
@@ -48,7 +50,6 @@ const CourseDetail = () => {
 
   return (
     <CourseDetailLayout>
-      CourseDetail For {courseSeq}
       {loading ? (
         <div>Loading..</div>
       ) : (

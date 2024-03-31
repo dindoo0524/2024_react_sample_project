@@ -12,9 +12,11 @@ const Notices = () => {
   }, []);
 
   const fetchNotices: () => Promise<void> = async () => {
-    const response = await fetch(
-      "https://dev-rest.liveklass.com/v2.0/channels/notices?channelSeq=101"
-    );
+    // const url =
+    //   "https://dev-rest.liveklass.com/v2.0/channels/notices?channelSeq=101";
+    const url =
+      "https://rest.liveklass.com/v2.0/channels/notices?channelSeq=2089";
+    const response = await fetch(url);
     const data = await response.json();
     if (response.ok) {
       setNotices(data.list);

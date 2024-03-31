@@ -12,9 +12,11 @@ const Courses = () => {
   }, []);
 
   const fetchCourses: () => Promise<void> = async () => {
-    const response = await fetch(
-      "https://dev-rest.liveklass.com/v3.0/channels/101/courses?size=48"
-    );
+    // const url =
+    //   "https://dev-rest.liveklass.com/v3.0/channels/101/courses?size=48";
+    const url = "https://rest.liveklass.com/v3.0/channels/2089/courses?size=48";
+
+    const response = await fetch(url);
     const data = await response.json();
     if (response.ok) {
       setCourses(data.courses);
